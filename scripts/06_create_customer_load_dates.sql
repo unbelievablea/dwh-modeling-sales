@@ -1,0 +1,7 @@
+-- Создаем таблицу с временем обновления витрины
+DROP TABLE IF EXISTS dwh.load_dates_customer_report_datamart;
+CREATE TABLE IF NOT EXISTS dwh.load_dates_customer_report_datamart (
+id bigint GENERATED ALWAYS AS IDENTITY,
+load_dttm DATE NOT NULL,
+CONSTRAINT load_dates_customer_report_datamart_pk PRIMARY KEY (id)
+);
